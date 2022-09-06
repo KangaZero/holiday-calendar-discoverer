@@ -11,27 +11,103 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    sm: '480px',
+                    md: '768px',
+                    lg: '976px',
+                    xl: '1440px'
+                },
+                extend: {
+                    colors: {
+                        brightRed: 'hsl(12, 88%, 59%)',
+                        brightRedLight: 'hsl(12, 88%, 69%)',
+                        brightRedSupLight: 'hsl(12, 88%, 95%)',
+                        darkBlue: 'hsl(228, 39%, 23%)',
+                        darkGrayishBlue: 'hsl(227, 12%, 61%)',
+                        veryDarkBlue: 'hsl(233, 12%, 13%)',
+                        veryPaleRed: 'hsl(13, 100%, 96%)',
+                        veryLightGray: 'hsl(0, 0%, 98%)',
+                    }
+                },
+            },
+    }   
+    </script>
   <!-- Add javascript script -->
   </head>
-<body>
-    <form>
-        <!-- drop down date picker -->
-        <input type="date"></input>
-    </form>
+<body class="font-mono">
+    <header class="container bg-brightRedLight py-8 flex justify-center w-full">
+        <h1 class="text-5xl font-bold underline p-4">Discover Holidays!</h1>
+    </header>
+    <div class="flex">
+        <aside class=" bg-veryLightGray flex-auto">
+            <h1 class="text-2xl font-bold flex justify-center p-8" >Pick a date to find out more</h1>
+            <!-- drop down date picker -->
+            <input type="date" class="flex justify-center p-8"></input>
+        </aside>
 
-    <!-- will take click.value of date picker and convert to string -->
-    <!-- use js to include date as query paramater in fetch function for API -->
-    <h1> Today's Holidays</h1>
-    <ul>
-        <li id="aus"><span></span></li>
-        <li class="chi"></li>
-        <li class="eng"></li>
-        <li class="aus"></li>
-        <li class="aus"></li>
-        <li class="aus"></li>
-        <li class="aus"></li>
-        <li class="aus"></li>
-    </ul>
+        <!-- will take click.value of date picker and convert to string -->
+        <!-- use js to include date as query paramater in fetch function for API -->
+        <section class="container bg-darkGrayishBlue flex-auto">
+            <h1 class ="text-2xl font-bold flex justify-center p-8"> Today's Holidays</h1>
+            <!-- <ul class="grid gap-4 grid-cols-2 flex justify-center">
+                <li id="aus">asdfasdfasd<span></span></li>
+                <li class="chi">asdfasdfasdf<span></span></li>
+                <li class="eng">asdfasdfasdf<span></span></li>
+                <li class="aus">asdfasdfasdf<span></span></li>
+                <li class="aus">asdfasdfasdf<span></span></li>
+                <li class="aus">asdfasdfasdf<span></span></li>
+                <li class="aus">asdfasdfasdf<span></span></li>
+                <li class="aus">asdfasdfasdf<span></span></li>
+            </ul> -->
+            <div class="grid grid-cols-2 gap-4 justify-items-center p-4">
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">Australia</h3>
+                    <!-- This is where we will use JS to dynamically add public holiday information with document query selector -->
+                    <!-- There is a placeholder text to demonstrate what the text will look like in these containers once dynamically rendered -->
+                    <p class= "flex justify-center p-3" id="Australia"> There are no holidays on this date for Australia</p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country2</h3>
+                    <p class="flex justify-center p-3" id="counrty2"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country3</h3>
+                    <p class="flex justify-center p-3" id="counrty3"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country4</h3>
+                    <p class="flex justify-center p-3" id="counrty4"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country5</h3>
+                    <p class="flex justify-center p-3" id="counrty5"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country6</h3>
+                    <p class="flex justify-center p-3" id="counrty6"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country7</h3>
+                    <p class="flex justify-center p-3" id="counrty7"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country8</h3>
+                    <p class="flex justify-center p-3" id="counrty8"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country9</h3>
+                    <p class="flex justify-center p-3" id="counrty9"></p>
+                </div>
+                <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
+                    <h3 class= "flex justify-center py-3 font underline">country10</h3>
+                    <p class="flex justify-center p-3" id="counrty10"></p>
+                </div>
+            </div>
+        </section>
+    </div>  
     
 </body>
 </html>
