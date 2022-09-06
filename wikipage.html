@@ -35,23 +35,23 @@
       </head>
 <body>
     <section id="hero" class="p-6 mb-10 space-y-12 bg-brightRedSupLight">
-        <h1 class="text-5xl font-bold text-center">Insert Holiday Name</h1>
+        <h1 id="holiday-title" class="text-5xl font-bold text-center">Insert Holiday Name</h1>
     </section>
 
     <section id="head" class="container flex flex-col-reverse md:flex-row items-center px-7 mx-auto mt-10 space-y-10 md:space-y-0 bg-brightRed">
         <h1 class="text-4xl font-bold text-left bg-brightRedLight">About <span id="holiday-name"></span></h1>
         <!--insert info-->
-        <p class="text-right wrap">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p id="info" class="text-right wrap">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
       
     </section>
     <section id="main" class="container flex">
         <!--insert image-->
-    <div class="content-left h-1/4 w-1/4 border-4 border-sky-600 mx-auto bg-brightRed">
+    <div id="img" class="content-left h-1/4 w-1/4 border-4 border-sky-600 mx-auto bg-brightRed">
         <img src="./assets/images/piano.jpg" alt="test image">
     </div>
         
         <!--insert additional info-->
-        <div class="content-right pt-10 bg-darkGray space-y-10 bg-darkGrayishBlue">
+        <div id="extra-info" class="content-right pt-10 bg-darkGray space-y-10 bg-darkGrayishBlue">
             <p>
                 At vero eos et accusamus et iusto ogeggrgwrrt rtebtrretb
             </p>
@@ -63,8 +63,8 @@
   
     <footer>
         <div class="container p-20 bg-sky-200">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back button</button>
-            <p class="text-right text-sky-600"><a href="#">Click here for more info</a></p>
+            <button id="return-to-home" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back button</button>
+            <p id="wiki" class="text-right text-sky-600"><a href="#">Click here for more info</a></p>
         </div>
     </footer>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
