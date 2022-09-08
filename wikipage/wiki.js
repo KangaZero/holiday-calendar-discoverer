@@ -1,14 +1,11 @@
 var imgEl = document.querySelector('#img');
 var titleEl = document.querySelector('#holiday-title');
 var infoEl = document.querySelector('#info');
-//unable to loop for now
-// for (var i = 1; i < 4; i++){
-//     var extraInfoEl{i} = document.querySelector(`#more-info-${i}`)
-// }
-var extraInfoEl1 = document.querySelector("#more-info-1")
-var extraInfoEl2 = document.querySelector("#more-info-2")
-var extraInfoEl3 = document.querySelector("#more-info-3")
-var extraInfoEl4 = document.querySelector("#more-info-4")
+
+//loop to create extraInfoEl1,extraInfoEl2,extraInfoEl3,..4  because 4 liEls exist in the html 
+for (var i = 1; i < 5; i++){ 
+    window['extraInfoEl' + i] = document.querySelector(`#more-info-${i}`);
+  }
 var wikiLinkEl = document.querySelector('#wiki');
 var homeBtnEl = document.querySelector('#return-to-home');
 
@@ -34,18 +31,21 @@ fetch(requestUrl)
 
           var apiTitle = data.query.search[0].title
           var headApiText = data.query.search[0].snippet 
-          //will try to loop
-          var extraApiText1 = data.query.search[1].snippet
-          var extraApiText2 = data.query.search[2].snippet
-          var extraApiText3 = data.query.search[3].snippet
-          var extraApiText4 = data.query.search[4].snippet
+      
+          for (var i = 1; i < 5; i++){ 
+            window['extraApiText' + i] = data.query.search[i].snippet
+          }
+        //   var extraApiText1 = data.query.search[1].snippet
+        //   var extraApiText2 = data.query.search[2].snippet
+        //   var extraApiText3 = data.query.search[3].snippet
+        //   var extraApiText4 = data.query.search[4].snippet
           
       
           var apiUrl = "https://en.wiktionary.org/wiki/" + holiday
       
         //renders from top to bottom of page
         renderTitle(apiTitle)
-        renderInfo(headApiText, extraApiText1, extraApiText2, extraApiText3, extraApiText4)
+        renderInfo(headApiText)
         renderUrlLink(apiUrl)
 
         });
@@ -68,13 +68,17 @@ function capitalizeFirstLetter(string) {
     titleEl.innerHTML = apiTitle
  }
 
- function renderInfo(headApiText, extraApiText1, extraApiText2, extraApiText3, extraApiText4){
+ //unable to add 2nd argument inside renderInfo function with "window['extraInfoEl' + i]"
+ function renderInfo(headApiText){
     infoEl.innerHTML = headApiText
-    //will try to loop 
-    extraInfoEl1.innerHTML = extraApiText1
-    extraInfoEl2.innerHTML = extraApiText2
-    extraInfoEl3.innerHTML = extraApiText3
-    extraInfoEl4.innerHTML = extraApiText4
+    
+    for (var i = 1; i < 5; i++){ 
+        window['extraInfoEl' + i].innerHTML = window['extraApiText' + i]
+      }
+    // extraInfoEl1.innerHTML = extraApiText1
+    // extraInfoEl2.innerHTML = extraApiText2
+    // extraInfoEl3.innerHTML = extraApiText3
+    // extraInfoEl4.innerHTML = extraApiText4
 }
 
 function renderUrlLink(apiUrl){
@@ -85,4 +89,7 @@ homeBtnEl.addEventListener('click', function(){
     //not tested yet
     window.location.assign('./index.html')
 })
+
+
+
 
