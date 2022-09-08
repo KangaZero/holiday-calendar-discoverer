@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 
- -->    <!--Add css link-->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+ -->
+    <!--Add css link-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
- <script
- type="text/javascript"
- src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-></script>
- 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,30 +38,33 @@
                     }
                 },
             },
-    }   
+        }   
     </script>
-  <!-- Add javascript script -->
-  </head>
+    <!-- Add javascript script -->
+</head>
+
 <body class="font-mono">
     <header class="container bg-brightRedLight py-8 flex justify-center w-full">
         <h1 class="text-5xl font-bold underline p-4">Discover Holidays!</h1>
     </header>
     <div class="flex">
         <aside class=" bg-veryLightGray flex-auto">
-            <h1 class="text-2xl font-bold flex justify-center p-8" >Pick a date to find out more</h1>
+            <h1 class="text-2xl font-bold flex justify-center p-8">Pick a date to find out more</h1>
             <!-- drop down date picker -->
-           <!--  <input type="date" id = "datepicker" class="flex justify-center p-8"></input> -->
-           <form id="Day-form">
-            <div class ="jumbotron">
-                <input type="text" id="datepicker" autofocus="true" class="flex justify-center p-8" autocomplete="off">
-                <button type ="submit" value="submit">Go</button>
-            </div>
-            </form>  </aside>
+            <!--  <input type="date" id = "datepicker" class="flex justify-center p-8"></input> -->
+            <form id="Day-form">
+                <div class="jumbotron">
+                    <input type="text" id="datepicker" autofocus="true" class="flex justify-center p-8"
+                        autocomplete="off">
+                    <button type="submit" value="submit">Go</button>
+                </div>
+            </form>
+        </aside>
 
         <!-- will take click.value of date picker and convert to string -->
         <!-- use js to include date as query paramater in fetch function for API -->
         <section class="container bg-darkGrayishBlue flex-auto">
-            <h1 class ="text-2xl font-bold flex justify-center p-8"> Today's Holidays</h1>
+            <h1 class="text-2xl font-bold flex justify-center p-8"> Today's Holidays</h1>
             <!-- <ul class="grid gap-4 grid-cols-2 flex justify-center">
                 <li id="aus">asdfasdfasd<span></span></li>
                 <li class="chi">asdfasdfasdf<span></span></li>
@@ -74,53 +77,55 @@
             </ul> -->
             <div class="grid grid-cols-2 gap-4 justify-items-center p-4">
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">Australia</h3>
+                    <h3 class="flex justify-center py-3 font underline">Australia</h3>
                     <!-- This is where we will use JS to dynamically add public holiday information with document query selector -->
                     <!-- There is a placeholder text to demonstrate what the text will look like in these containers once dynamically rendered -->
-                    <p class= "flex justify-center p-3" id="Australia"> There are no holidays on this date for Australia</p>
+                    <p class="flex justify-center p-3" id="AU"> There are no holidays on this date for Australia</p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country2</h3>
-                    <p class="flex justify-center p-3" id="counrty2"></p>
+                    <h3 class="flex justify-center py-3 font underline">USA</h3>
+                    <p class="flex justify-center p-3" id="US"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country3</h3>
+                    <h3 class="flex justify-center py-3 font underline">country3</h3>
                     <p class="flex justify-center p-3" id="counrty3"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country4</h3>
+                    <h3 class="flex justify-center py-3 font underline">country4</h3>
                     <p class="flex justify-center p-3" id="counrty4"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country5</h3>
+                    <h3 class="flex justify-center py-3 font underline">country5</h3>
                     <p class="flex justify-center p-3" id="counrty5"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country6</h3>
+                    <h3 class="flex justify-center py-3 font underline">country6</h3>
                     <p class="flex justify-center p-3" id="counrty6"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country7</h3>
+                    <h3 class="flex justify-center py-3 font underline">country7</h3>
                     <p class="flex justify-center p-3" id="counrty7"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country8</h3>
+                    <h3 class="flex justify-center py-3 font underline">country8</h3>
                     <p class="flex justify-center p-3" id="counrty8"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country9</h3>
+                    <h3 class="flex justify-center py-3 font underline">country9</h3>
                     <p class="flex justify-center p-3" id="counrty9"></p>
                 </div>
                 <div class="container w-4/5 h-40 border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed">
-                    <h3 class= "flex justify-center py-3 font underline">country10</h3>
+                    <h3 class="flex justify-center py-3 font underline">country10</h3>
                     <p class="flex justify-center p-3" id="counrty10"></p>
                 </div>
             </div>
         </section>
-    </div>  
-   
+    </div>
+
     <!-- jQuery UI <script> tag -->
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-   <script src="../script.js"></script></body>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../script.js"></script>
+</body>
+
 </html>
