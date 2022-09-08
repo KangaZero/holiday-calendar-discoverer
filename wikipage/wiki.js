@@ -1,12 +1,14 @@
 var imgEl = document.querySelector('#img');
 var titleEl = document.querySelector('#holiday-title');
 var infoEl = document.querySelector('#info');
-//test
-//targets 4 ids 
-for (var i = 1; i < 4; i++){
-var extraInfoEl = document.querySelector(`#more-info-${i}`)
-}
-console.log("e", extraInfoEl)
+//unable to loop for now
+// for (var i = 1; i < 4; i++){
+//     var extraInfoEl{i} = document.querySelector(`#more-info-${i}`)
+// }
+var extraInfoEl1 = document.querySelector("#more-info-1")
+var extraInfoEl2 = document.querySelector("#more-info-2")
+var extraInfoEl3 = document.querySelector("#more-info-3")
+var extraInfoEl4 = document.querySelector("#more-info-4")
 var wikiLinkEl = document.querySelector('#wiki');
 var homeBtnEl = document.querySelector('#return-to-home');
 
@@ -26,23 +28,24 @@ fetch(requestUrl)
         response.json().then(function (data){
 
         //initial debugging 
-            // console.log(data);
+            console.log(data);
             // console.log(data.query.search[0].title)
-            // console.log(data.query.search[0].snippet)
+             console.log(data.query.search[1].snippet)
 
           var apiTitle = data.query.search[0].title
           var headApiText = data.query.search[0].snippet 
-            //test 
-          for (var i = 0; i < 4; i++){
-          var extraApiText = data.query.search[i].snippet
-          }
-          console.log(extraApiText)
-    
+          //will try to loop
+          var extraApiText1 = data.query.search[1].snippet
+          var extraApiText2 = data.query.search[2].snippet
+          var extraApiText3 = data.query.search[3].snippet
+          var extraApiText4 = data.query.search[4].snippet
+          
+      
           var apiUrl = "https://en.wiktionary.org/wiki/" + holiday
       
         //renders from top to bottom of page
         renderTitle(apiTitle)
-        renderInfo(headApiText, extraApiText)
+        renderInfo(headApiText, extraApiText1, extraApiText2, extraApiText3, extraApiText4)
         renderUrlLink(apiUrl)
 
         });
@@ -65,10 +68,13 @@ function capitalizeFirstLetter(string) {
     titleEl.innerHTML = apiTitle
  }
 
- function renderInfo(headApiText, extraApiText){
+ function renderInfo(headApiText, extraApiText1, extraApiText2, extraApiText3, extraApiText4){
     infoEl.innerHTML = headApiText
-    //need testing
-    extraInfoEl.innerHTML = extraApiText
+    //will try to loop 
+    extraInfoEl1.innerHTML = extraApiText1
+    extraInfoEl2.innerHTML = extraApiText2
+    extraInfoEl3.innerHTML = extraApiText3
+    extraInfoEl4.innerHTML = extraApiText4
 }
 
 function renderUrlLink(apiUrl){
@@ -79,3 +85,4 @@ homeBtnEl.addEventListener('click', function(){
     //not tested yet
     window.location.assign('./index.html')
 })
+
