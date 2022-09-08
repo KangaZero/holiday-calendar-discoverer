@@ -68,7 +68,7 @@ function capitalizeFirstLetter(string) {
  function renderInfo(headApiText, extraApiText){
     infoEl.innerHTML = headApiText
     //need testing
-    extraInfoEl.innerHTML = extraInfoEl
+    extraInfoEl.innerHTML = extraApiText
 }
 
 function renderUrlLink(apiUrl){
