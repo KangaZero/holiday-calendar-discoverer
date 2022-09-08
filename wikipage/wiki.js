@@ -1,8 +1,15 @@
 var imgEl = document.querySelector('#img');
 var titleEl = document.querySelector('#holiday-title');
 var infoEl = document.querySelector('#info');
+//test
+//targets 4 ids 
+for (var i = 1; i < 4; i++){
+var extraInfoEl = document.querySelector(`#more-info-${i}`)
+}
+console.log("e", extraInfoEl)
 var wikiLinkEl = document.querySelector('#wiki');
 var homeBtnEl = document.querySelector('#return-to-home');
+
 
 
 function getApi(requestUrl){
@@ -24,12 +31,18 @@ fetch(requestUrl)
             // console.log(data.query.search[0].snippet)
 
           var apiTitle = data.query.search[0].title
-          var apiText = data.query.search[0].snippet
+          var headApiText = data.query.search[0].snippet 
+            //test 
+          for (var i = 0; i < 4; i++){
+          var extraApiText = data.query.search[i].snippet
+          }
+          console.log(extraApiText)
+    
           var apiUrl = "https://en.wiktionary.org/wiki/" + holiday
       
         //renders from top to bottom of page
         renderTitle(apiTitle)
-        renderInfo(apiText)
+        renderInfo(headApiText, extraApiText)
         renderUrlLink(apiUrl)
 
         });
@@ -52,8 +65,10 @@ function capitalizeFirstLetter(string) {
     titleEl.innerHTML = apiTitle
  }
 
- function renderInfo(apiText){
-    infoEl.innerHTML = apiText
+ function renderInfo(headApiText, extraApiText){
+    infoEl.innerHTML = headApiText
+    //need testing
+    extraInfoEl.innerHTML = extraInfoEl
 }
 
 function renderUrlLink(apiUrl){
