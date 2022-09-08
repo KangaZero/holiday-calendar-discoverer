@@ -9,25 +9,34 @@ function getApi(requestUrl){
 //currently testing Australia Day
 //need to include query parameter 'origin=*' to work
 var holiday = "Australia Day"
+holiday = capitalizeFirstLetter(holiday)
 var requestUrl = "https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&page=" + holiday
 
 fetch(requestUrl)
 .then(function (response){
     if (response.ok){
         response.json().then(function (data){
+            //test
             console.log(data);
-            console.log(data.parse.iwlinks[1].url);
 
+            //gets the title
             var apiTitle = data.parse.title
+
             //still testing
+            //gets main info
             var apiText = data.parse.text["*"]
            
-          //  $( "p:nth-child(3)" )
-            var apiUrl = data.parse.iwlinks[1].url
+            // We want apiText$( "p:nth-child(2/3)" )  //currently do not know how to do
+            //var apiUrl = data.parse.iwlinks[0].url
+            var apiUrl = "https://en.wiktionary.org/wiki/" + holiday
             
-                    console.log(apiText.length)
-
-                    console.log(apiText)
+            //gets random img name 
+            //TODO: Get image url 
+            var i = Math.floor(Math.random() * data.parse.images.length)
+            var apiImg = data.parse.images[i]
+            
+                    console.log("apiUrl", apiUrl)
+                    console.log("apiText", apiText)
 
             function renderTitle(){
                 titleEl.innerHTML = apiTitle
@@ -51,7 +60,12 @@ fetch(requestUrl)
 }
 getApi();
 
+//no img url given in API 
 function renderImage(){
     imgEl.setAttribute('src',)
 }
 
+//https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
