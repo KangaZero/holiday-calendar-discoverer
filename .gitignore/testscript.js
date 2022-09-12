@@ -75,4 +75,3 @@ function renderHolidayInfo(country, holidayInfo) {
 }
 
 // renderHolidayInfo("AU", { name: "Australia Day" })
-

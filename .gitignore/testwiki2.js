@@ -2,7 +2,7 @@ var imgEl = document.querySelector('#img');
 var titleEl = document.querySelector('#holiday-title');
 var infoEl = document.querySelector('#info');
 
-//loop to create extraInfoEl1,extraInfoEl2,extraInfoEl3,..4  because 4 liEls exist in the html 
+//loop to create extraInfoEl1,extraInfoEl2,extraInfoEl3,..5
 for (var i = 1; i < 5; i++){ 
     window['extraInfoEl' + i] = document.querySelector(`#more-info-${i}`);
   }
@@ -89,7 +89,6 @@ homeBtnEl.addEventListener('click', function(){
     //not tested yet
     window.location.assign('./index.html')
 })
-
 
 
 
