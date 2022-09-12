@@ -1,13 +1,13 @@
 var dateInputE1 = $('#datepicker');
 var formE1 = $('#Day-form')
 var m = moment();
-// var arr1= [];
-// var dateString ='';
-var countryCodes = ['AU', 'US']
+
+var countryCodes = ['AU', 'US', 'CN', 'CO', 'TR', 'SG', 'IT', 'NZ']
+
 // Datepicker widget
 $(function () {
   $('#datepicker').datepicker({
-    altFormat: "dd/mm/yyyy",
+    dateFormat: "yy-mm-dd",
     changeMonth: true,
     changeYear: true,
   });
@@ -16,23 +16,20 @@ $(function () {
 //Accepting input date function
 
 var handleSubmit = function (event) {
-  // console.log('function called');
+
   event.preventDefault();
   var dateInput = dateInputE1.val();
-  console.log(typeof dateInput);
-  console.log(dateInput);
-  // var myDate = moment(str, 'YYYY-MM-DD').toDate();
 
-  var dateParts = dateInput.split('/');
-  var month = dateParts[0]
-  var day = dateParts[1]
-  var year = dateParts[2]
-  var dateString = year + '-' + month + '-' + day
+  console.log("input date " + dateInput);
+  //extracting year from the input date
+  var year = moment(dateInput, "yy-mm-dd").year();
+
+
 
 
   for (let i = 0; i < countryCodes.length; i++) {
     const country = countryCodes[i];
-    getHoidayInfo(country, year, dateString)
+    getHoidayInfo(country, year, dateInput)
   }
 
 
@@ -40,7 +37,7 @@ var handleSubmit = function (event) {
 
 formE1.on('submit', handleSubmit);
 
-function getHoidayInfo(country, year, dateString) {
+function getHoidayInfo(country, year, dateInput) {
 
   var requestUrl = 'https://date.nager.at/api/v3/publicholidays/' + year + '/' + country;
 
@@ -49,15 +46,15 @@ function getHoidayInfo(country, year, dateString) {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data[1].name);
+
 
       for (var i = 0; i < data.length; i++) {
-        console.log(data[i].date.length);
-        console.log(dateString.length);
-        if ((data[i].date === dateString)) {
-          console.log(data[i].name);
-          // var showHoliday = document.querySelector('#Australia');
-          // showHoliday.textContent = data[i].name;
+
+
+        if ((data[i].date === dateInput)) {
+          console.log(data[i].date); console.log(dateInput);
+          var country = (data[i].countryCode);
+          console.log(country)
           renderHolidayInfo(country, data[i])
         }
         else {
@@ -70,9 +67,27 @@ function getHoidayInfo(country, year, dateString) {
 
 
 function renderHolidayInfo(country, holidayInfo) {
+
   var showHolidayEl = document.getElementById(country);
   showHolidayEl.textContent = holidayInfo.name;
+  var btn1 = document.createElement('button');
+  btn1.innerHTML = 'Info';
+  btn1.classList.add('bg-blue-500', 'mg-5');
+  btn1.value = country;
+  showHolidayEl.appendChild(btn1);
+  //add css to buttons
+  btn1.onclick = function () {
+
+
+    localStorage.setItem("HolidayName", holidayInfo.name);
+    window.location.href = "../wikipage.html";
+
+  };
+
+
 }
 
 // renderHolidayInfo("AU", { name: "Australia Day" })
+
+
 
