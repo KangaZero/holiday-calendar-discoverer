@@ -1,9 +1,8 @@
 function fetchHolidayInfo(requestURL) {
 
     // fetch holiday value from local storage (and stringify?) to be readable, currently setting local storage item manually to test functionality
-    holiday = "Australia Day" 
-    localStorage.setItem("holiday", holiday)
-    var holidayValue = localStorage.getItem("holiday")
+   
+    var holidayValue = localStorage.getItem("HolidayName")
 
     // request url with holiday query paramater added as a value (fetched from local storage)
     var requestURL = "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=" + holidayValue
