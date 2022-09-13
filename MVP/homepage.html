@@ -46,16 +46,16 @@
     </header>
     <div class="flex">
         <aside class=" bg-darkGrayishBlue flex-auto">
-            <h1 class="text-2xl font-bold flex justify-center p-8">Pick a date to find out more</h1>
+            <h1 class="text-3xl font-bold flex justify-center p-8">Pick a date to find out more</h1>
             <!-- drop down date picker -->
             <!--  <input type="date" id = "datepicker" class="flex justify-center p-8"></input> -->
             <form id="Day-form">
-                <div class="flex justify-center">
-                    <input type="text" id="datepicker" class="flex justify-center p-6" autocomplete="off"
-                        placeholder="Click to select date">
+
+                <div class= "flex justify-center gap-1">
+                    <input type="text" id="datepicker" class="p-6 border-2 border-black rounded-lg hover:border-brightRed" autocomplete="off" placeholder="Click to select date">
                     <br>
-                    <button class="bg-brightRedLight hover:bg-darkBlue hover:text-white p-2" type="submit"
-                        value="submit">Go!</button>
+                    <button class=" p-4 border-2 border-black rounded-lg bg-brightRedLight hover:bg-darkBlue hover:text-white hover:border-4 hover:border-brightRed" type="submit" value="submit">Go!</button>
+
                 </div>
             </form>
         </aside>
@@ -63,7 +63,10 @@
         <!-- will take click.value of date picker and convert to string -->
         <!-- use js to include date as query paramater in fetch function for API -->
         <section class="container bg-veryLightGray flex-auto">
-            <h1 class="text-2xl font-bold flex justify-center p-8"> Today's Holidays</h1>
+
+            <h1 class="text-3xl font-bold flex justify-center p-8"> Today's Holidays</h1>
+            <p class="text-xl flex justify-center px-8 py-2"><span id="find-out-more"></span></p>
+
 
             <div class="grid grid-cols-2 gap-4 justify-items-center p-4">
                 <div id="AU1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25"
