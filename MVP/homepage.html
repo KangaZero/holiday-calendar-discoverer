@@ -7,8 +7,7 @@
 
 
     <!--Add css link-->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4..0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4..0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
@@ -51,10 +50,12 @@
             <!-- drop down date picker -->
             <!--  <input type="date" id = "datepicker" class="flex justify-center p-8"></input> -->
             <form id="Day-form">
-                <div class= "flex justify-center">
-                    <input type="text" id="datepicker" class="flex justify-center p-6" autocomplete="off" placeholder="Click to select date">
+                <div class="flex justify-center">
+                    <input type="text" id="datepicker" class="flex justify-center p-6" autocomplete="off"
+                        placeholder="Click to select date">
                     <br>
-                    <button class="bg-brightRedLight hover:bg-darkBlue hover:text-white p-2" type="submit" value="submit">Go!</button>
+                    <button class="bg-brightRedLight hover:bg-darkBlue hover:text-white p-2" type="submit"
+                        value="submit">Go!</button>
                 </div>
             </form>
         </aside>
@@ -63,56 +64,57 @@
         <!-- use js to include date as query paramater in fetch function for API -->
         <section class="container bg-veryLightGray flex-auto">
             <h1 class="text-2xl font-bold flex justify-center p-8"> Today's Holidays</h1>
-            <!-- <ul class="grid gap-4 grid-cols-2 flex justify-center">
-                <li id="aus">asdfasdfasd<span></span></li>
-                <li class="chi">asdfasdfasdf<span></span></li>
-                <li class="eng">asdfasdfasdf<span></span></li>
-                <li class="aus">asdfasdfasdf<span></span></li>
-                <li class="aus">asdfasdfasdf<span></span></li>
-                <li class="aus">asdfasdfasdf<span></span></li>
-                <li class="aus">asdfasdfasdf<span></span></li>
-                <li class="aus">asdfasdfasdf<span></span></li>
-            </ul> -->
+
             <div class="grid grid-cols-2 gap-4 justify-items-center p-4">
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/australian-flag.png')">
+                <div id="AU1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25"
+                    style="background-image: url('./assets/images/flags/australian-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Australia</h3>
                     <!-- This is where we will use JS to dynamically add public holiday information with document query selector -->
                     <!-- There is a placeholder text to demonstrate what the text will look like in these containers once dynamically rendered -->
-                    <p class="flex justify-center p-3 " id="AU"> Holidays for Australia on the selected date will be displayed here</p>
+                    <p class="flex justify-center p-3 " id="AU">Holidays for Australia on the selected date will be displayed here </p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/chinese-flag.png')">
+                <div id="CN1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/chinese-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">China</h3>
                     <p class="flex justify-center p-3" id="CN">Holidays for China on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/japanese-flag.png')">
+                <div id="JP1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25"
+                    style="background-image: url('./assets/images/flags/japanese-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Japan</h3>
                     <p class="flex justify-center p-3" id="JP">Holidays for Japan on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/german-flag.png')">
+                <div id="DE1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/german-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Germany</h3>
                     <p class="flex justify-center p-3" id="DE">Holidays for Germany on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/italian-flag.png')">
+                <div id="IT1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/italian-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Italy</h3>
                     <p class="flex justify-center p-3" id="IT">Holidays for Italy on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/usa-flag.png')">
+                <div id="US1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/usa-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">United States</h3>
                     <p class="flex justify-center p-3" id="US">Holidays for the US on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/nz-flag.png')">
+                <div id="NZ1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/nz-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">New Zealand</h3>
                     <p class="flex justify-center p-3" id="NZ">Holidays for New Zealand on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/turkish-flag.png')">
+                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25"
+                    style="background-image: url('./assets/images/flags/turkish-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Turkey</h3>
                     <p class="flex justify-center p-3" id="TR">Holidays for Turkey on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/danish-flag.png')">
+                <div id="DK1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/danish-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Denmark</h3>
                     <p class="flex justify-center p-3" id="DK">Holidays for Denmark on the selected date will be displayed here</p>
                 </div>
-                <div class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 hover:border-brightRed hover:border-8 hover:bg-darkBlue hover:text-white" style="background-image: url('./assets/images/flags/singaporean-flag.png')">
+                <div id="SG1" class="container w-4/5 h-40 border-solid border-4 rounded-lg border-black bg-opacity-25 "
+                    style="background-image: url('./assets/images/flags/singaporean-flag.png')">
                     <h3 class="flex justify-center py-3 font underline text-xl">Singapore</h3>
                     <p class="flex justify-center p-3" id="SG">Holidays for Singapore on the selected date will be displayed here</p>
                 </div>
