@@ -72,6 +72,8 @@ function renderHolidayInfo(country, holidayInfo) {
   var showHolidayEl = document.getElementById(country);
   showHolidayEl.textContent = holidayInfo.name;
   showHolidayEl.classList.add("p-2")
+  var findOutMore = document.getElementById("find-out-more");
+  findOutMore.textContent = "Click on a card with a holiday to find out more";
   var btn1 = document.createElement('button');
   // var linebreak = document.createElement('br');
   // var newP = document.createElement('p')
