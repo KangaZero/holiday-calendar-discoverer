@@ -37,27 +37,35 @@
 
 <body class="font-mono">
     <header id="hero" class="p-6 mb-10 space-y-12 bg-brightRedLight">
-        <h1 class="text-5xl font-bold text-center"><span id="holiday-title"></span></h1>
+        <h1 class="text-5xl font-bold text-center">✨ <span id="holiday-title"></span> ✨</h1>
     </header>
 
+    <h2 class="text-center px-8"> Below is a snippet of information from wikipedia about this holiday. Please click the button at the bottom of the page to find out more.</h2>
+    
     <section id="head"
-        class="container flex flex-col md:flex-row items-center px-7 mx-auto mt-10 space-y-10 md:space-y-0 bg-veryPaleRed">
-        <h1 class="text-2xl font-bold text-left bg-brightRedSupLight p-8 "><span id="holiday-name"></span>...</h1>
+        class="flex flex-col md:flex-row items-center py-8 mx-auto mt-10 space-y-10 md:space-y-0 bg-darkGrayishBlue">
+        <h1 class="text-2xl font-bold text-left bg-darkGrayishBlue p-8"><span id="holiday-name"></span>...</h1>
         <!--insert info-->
         <p class="text-right wrap"><span id="info-main" ></span></p>
-
     </section>
 
-    <section class="flex flex-col p-28 bg-veryLightGray space-y-5 md:flex-row">
+    <br>
+
+    <section class="justify-items-center p-4"><a id="image-area"></a></section>
+
+    <br>
+
+    <section class=" p-28 bg-veryLightGray space-y-5 md:flex-row">
+        <h2 class="text-center"> Information on related holidays - click on a card to find out more!</h2>
         <!-- We can append list items here for search query results, it might look something like the following for example -->
         <ul>
-            <li class="border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed p-8 hover:bg-brightRedLight"><span id="infocard1"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white"><span id="infocard1"></span>...</li>
             <br>
-            <li class="border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed p-8 hover:bg-brightRedLight" ><span id="infocard2"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white" ><span id="infocard2"></span>...</li>
             <br>
-            <li class="border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed p-8 hover:bg-brightRedLight"><span id="infocard3"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white"><span id="infocard3"></span>...</li>
             <br>
-            <li class="border-solid border-2 rounded-lg border-brightRed bg-veryPaleRed p-8 hover:bg-brightRedLight"><span id="infocard4"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white"><span id="infocard4"></span>...</li>
            
         </ul>
     </section>
