@@ -69,10 +69,15 @@ function renderHolidayInfo(country, holidayInfo) {
 
   var showHolidayEl = document.getElementById(country);
   showHolidayEl.textContent = holidayInfo.name;
+  showHolidayEl.classList.add("p-2")
   var btn1 = document.createElement('button');
+  // var linebreak = document.createElement('br');
+  // var newP = document.createElement('p')
   btn1.innerHTML = 'Info';
-  btn1.classList.add('bg-blue-500', 'mg-5');
+  btn1.classList.add('bg-brightRedLight', 'hover:bg-darkGrayishBlue', 'hover:text-white', 'p-2');
   btn1.value = country;
+  // showHolidayEl.appendChild(linebreak);
+  // showHolidayEl.appendChild(newP);
   showHolidayEl.appendChild(btn1);
   //add css to buttons
   btn1.onclick = function() {
