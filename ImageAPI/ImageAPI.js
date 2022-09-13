@@ -1,4 +1,6 @@
-var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=aLdZQGbKZzBD4Xi0ABfgK09P629ZlTAy&q=Christmas&limit=25&offset=0&rating=g&lang=en";
+//Christmas is the Placeholder - As quote by Sam.
+var holidayName="Christmas"
+var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=aLdZQGbKZzBD4Xi0ABfgK09P629ZlTAy&q=" + holidayName + "&limit=25&offset=0&rating=g&lang=en";
 var getImage=document.querySelector("#image")
   fetch(requestUrl)
     .then(function (response) {
