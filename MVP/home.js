@@ -59,6 +59,8 @@ function getHoidayInfo(country, year, dateInput) {
         }
         else {
           console.log("No holiday Found");
+          // renderErrorCode()
+
         }
       }
     });
@@ -87,8 +89,10 @@ function renderHolidayInfo(country, holidayInfo) {
     window.location.href = "wikipage.html";
 
   };
-
-
 }
 
+// function renderErrorCode(country) {
+//   var showHolidayEl = document.getElementById(country);
+//   showHolidayEl.textContent = "There are no holidays on this date in this country."
+// }
 // renderHolidayInfo("AU", { name: "Australia Day" })
