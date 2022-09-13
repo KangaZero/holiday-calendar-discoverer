@@ -64,6 +64,8 @@ function getHoidayInfo(country, year, dateInput) {
         else {
 
           console.log("No holiday Found");
+          // renderErrorCode()
+
         }
       }
     });
@@ -85,23 +87,15 @@ function renderHolidayInfo(country, holidayInfo) {
     window.location.href = "wikipage.html";
 
   };
-  /* 
-    var btn1 = document.createElement('button');
-   
-    btn1.innerHTML = 'Info';
-    btn1.classList.add('bg-brightRedLight', 'hover:bg-darkGrayishBlue', 'hover:text-white', 'p-2');
-    btn1.value = country;
-  
-    showHolidayEl.appendChild(btn1);
-  
-    btn1.onclick = function () {
-  
-  
-      localStorage.setItem("HolidayName", holidayInfo.name);
-      window.location.href = "wikipage.html";
-  
-    }; */
 
 
 }
+
+}
+
+// function renderErrorCode(country) {
+//   var showHolidayEl = document.getElementById(country);
+//   showHolidayEl.textContent = "There are no holidays on this date in this country."
+// }
+// renderHolidayInfo("AU", { name: "Australia Day" })
 

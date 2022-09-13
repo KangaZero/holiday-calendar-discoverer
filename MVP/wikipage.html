@@ -40,7 +40,8 @@
         <h1 class="text-5xl font-bold text-center">✨ <span id="holiday-title"></span> ✨</h1>
     </header>
 
-    <h2 class="text-center px-8"> Below is a snippet of information from wikipedia about this holiday. Please click the button at the bottom of the page to find out more.</h2>
+    <h2 class="text-center px-32"> Below is a snippet of information from wikipedia about this holiday provided by MediaWiki.</h2>
+    <h2 class="text-center px-32">Please click the button at the bottom of the page to find out more.</h2>
     
     <section id="head"
         class="flex flex-col md:flex-row items-center py-8 mx-auto mt-10 space-y-10 md:space-y-0 bg-darkGrayishBlue">
@@ -56,17 +57,32 @@
     <br>
 
     <section class=" p-28 bg-veryLightGray space-y-5 md:flex-row">
-        <h2 class="text-center"> Information on related holidays - click on a card to find out more!</h2>
+        <h2 class="text-center"> Information from related Wiki pages - click on a card to find out more!</h2>
         <!-- We can append list items here for search query results, it might look something like the following for example -->
         <ul>
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white"><span id="infocard1"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white">
+                <h3 class="text-center font-bold"><span id="infocard1-title"></span></h3>
+                <br>
+                <p><span id="infocard1-text"></span>...</p>
+            </li>
             <br>
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white" ><span id="infocard2"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white">
+                <h3 class="text-center font-bold"><span id="infocard2-title"></span></h3>
+                <br>
+                <p><span id="infocard2-text"></span>...</p>
+            </li>            
             <br>
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white"><span id="infocard3"></span>...</li>
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white">
+                <h3 class="text-center font-bold"><span id="infocard3-title"></span></h3>
+                <br>
+                <p><span id="infocard3-text"></span>...</p>
+            </li>             
             <br>
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white"><span id="infocard4"></span>...</li>
-           
+            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-8 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white">
+                <h3 class="text-center font-bold"><span id="infocard4-title"></span></h3>
+                <br>
+                <p><span id="infocard4-text"></span>...</p>
+            </li>            
         </ul>
     </section>
 
@@ -76,7 +92,7 @@
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded md:justify-start">Back
                 button</button>
 
-            <p class="container text-center text-white md:text-right"><a id="wikiButton" href="#">Click here for more
+            <p class="container text-center text-white md:text-right hover:text-darkBlue"><a id="wikiButton" href="#">Click here for more
                     info...</a></p>
 
         </div>

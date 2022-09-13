@@ -25,6 +25,11 @@ function fetchHolidayInfo(requestURL) {
                 // }
 
             // creating vars for info cards
+            var extraApiTitle1 = data.query.search[1].title
+            var extraApiTitle2 = data.query.search[2].title
+            var extraApiTitle3 = data.query.search[3].title
+            var extraApiTitle4 = data.query.search[4].title
+
             var extraApiText1 = data.query.search[1].snippet
             var extraApiText2 = data.query.search[2].snippet
             var extraApiText3 = data.query.search[3].snippet
@@ -35,10 +40,10 @@ function fetchHolidayInfo(requestURL) {
 
             renderTitle(title)
             renderInfo(snippetMain)
-            renderExtraInfo1(extraApiText1)
-            renderExtraInfo2(extraApiText2)
-            renderExtraInfo3(extraApiText3)
-            renderExtraInfo4(extraApiText4)
+            renderExtraInfo1(extraApiTitle1, extraApiText1)
+            renderExtraInfo2(extraApiTitle2, extraApiText2)
+            renderExtraInfo3(extraApiTitle3, extraApiText3)
+            renderExtraInfo4(extraApiTitle4, extraApiText4)
             renderURL(learnMoreURL)
 
         });
@@ -54,10 +59,14 @@ fetchHolidayInfo();
 // document target areas
 var mainHeader = document.getElementById("holiday-title");
 var mainSnippetTitle = document.getElementById("holiday-name");
-var infocard1 = document.getElementById("infocard1");
-var infocard2 = document.getElementById("infocard2");
-var infocard3 = document.getElementById("infocard3");
-var infocard4 = document.getElementById("infocard4");
+var infocard1Title = document.getElementById("infocard1-title");
+var infocard2Title = document.getElementById("infocard2-title");
+var infocard3Title = document.getElementById("infocard3-title");
+var infocard4Title = document.getElementById("infocard4-title");
+var infocard1Text = document.getElementById("infocard1-text");
+var infocard2Text = document.getElementById("infocard2-text");
+var infocard3Text = document.getElementById("infocard3-text");
+var infocard4Text = document.getElementById("infocard4-text");
 var wikiButton = document.getElementById("wikiButton");
 
 
@@ -73,17 +82,21 @@ function renderTitle(title){
 }
 
 // renders all info cards
-function renderExtraInfo1(extraApiText1){
-    infocard1.innerHTML = extraApiText1
+function renderExtraInfo1(extraApiTitle1, extraApiText1){
+    infocard1Title.innerHTML = extraApiTitle1;
+    infocard1Text.innerHTML = extraApiText1
 }
-function renderExtraInfo2(extraApiText2){
-    infocard2.innerHTML = extraApiText2
+function renderExtraInfo2(extraApiTitle2, extraApiText2){
+    infocard2Title.innerHTML = extraApiTitle2;
+    infocard2Text.innerHTML = extraApiText2
 }
-function renderExtraInfo3(extraApiText3){
-    infocard3.innerHTML = extraApiText3
+function renderExtraInfo3(extraApiTitle3, extraApiText3){
+    infocard3Title.innerHTML = extraApiTitle3;
+    infocard3Text.innerHTML = extraApiText3
 }
-function renderExtraInfo4(extraApiText4){
-    infocard4.innerHTML = extraApiText4
+function renderExtraInfo4(extraApiTitle4, extraApiText4){
+    infocard4Title.innerHTML = extraApiTitle4;
+    infocard4Text.innerHTML = extraApiText4
 }
 
 
@@ -92,16 +105,18 @@ function renderURL(learnMoreURL){
     wikiButton.setAttribute("href", learnMoreURL)
 }
 
-// homeBtnEl.addEventListener('click', function(){
-//     //not tested yet
-//     window.location.assign('./index.html')
-// })
+
+var homeBtnEl = document.getElementById('return-to-home')
+homeBtnEl.addEventListener('click', function(){
+    //not tested yet
+    window.location.assign('homepage.html')
+})
 
 // ignore this part of the code, I'm trying to create an event listener on the info cards so that we don't need to append a button to take us to a new page
-var info1URL = "https://en.wiktionary.org/wiki/" + data.query.search[1].title
-var info2URL = "https://en.wiktionary.org/wiki/"+ data.query.search[2].title
-var info3URL = "https://en.wiktionary.org/wiki/" + data.query.search[3].title
-var info4URL ="https://en.wiktionary.org/wiki/" + data.query.search[4].title
+var info1URL = "https://en.wikipedia.org/wiki/" + data.query.search[1].title
+var info2URL = "https://en.wikipedea.org/wiki/"+ data.query.search[2].title
+var info3URL = "https://en.wikipedia.org/wiki/" + data.query.search[3].title
+var info4URL ="https://en.wikipedia.org/wiki/" + data.query.search[4].title
 
 infocard1.addEventListener('click',function(){
     window.location.assign = info1URL
