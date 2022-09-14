@@ -69,11 +69,11 @@ function renderHolidayInfo(country, holidayInfo) {
 
   var showHolidayEl = document.getElementById(country);
   showHolidayEl.textContent = holidayInfo.name;
+
   showHolidayEl.classList.add("p-2");
   var showHolidayE1Parent = document.getElementById(country + "1")
   showHolidayE1Parent.classList.add("hover:border-brightRed", "hover:border-8", "hover:bg-darkBlue", "hover:text-white");
   //making the Country card clickable for fetching more info
-
   showHolidayEl.onclick = function () {
 
     localStorage.setItem("HolidayName", holidayInfo.name);
