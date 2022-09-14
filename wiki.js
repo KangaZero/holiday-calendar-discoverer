@@ -109,7 +109,7 @@ function renderURL(learnMoreURL){
 var homeBtnEl = document.getElementById('return-to-home')
 homeBtnEl.addEventListener('click', function(){
     //not tested yet
-    window.location.assign('homepage.html')
+    window.location.assign('index.html')
 })
 
 // ignore this part of the code, I'm trying to create an event listener on the info cards so that we don't need to append a button to take us to a new page

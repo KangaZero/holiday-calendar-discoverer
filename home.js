@@ -1,6 +1,5 @@
 var dateInputE1 = $('#datepicker');
 var formE1 = $('#Day-form')
-//var m = moment();
 matchfound = new Boolean();
 
 var countryCodes = ['AU', 'US', 'CN', 'JP', 'DE', 'SG', 'IT', 'NZ', 'DK', 'TR']
@@ -52,20 +51,14 @@ function getHoidayInfo(country, year, dateInput) {
 
       for (var i = 0; i < data.length; i++) {
 
-
-
         if ((data[i].date === dateInput)) {
 
           var country = (data[i].countryCode);
-
           renderHolidayInfo(country, data[i])
           matchfound = true;
         }
         else {
-
           console.log("No holiday Found");
-          // renderErrorCode()
-
         }
       }
     });
@@ -88,8 +81,6 @@ function renderHolidayInfo(country, holidayInfo) {
 
   };
 
-
-}
 
 }
 
