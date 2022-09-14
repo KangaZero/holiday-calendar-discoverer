@@ -1,9 +1,9 @@
 var dateInputE1 = $('#datepicker');
 var formE1 = $('#Day-form')
-var m = moment();
+//var m = moment();
+matchfound = new Boolean();
 
-var countryCodes = ['AU', 'US', 'CN', 'CO', 'TR', 'SG', 'IT', 'NZ']
-
+var countryCodes = ['AU', 'US', 'CN', 'JP', 'DE', 'SG', 'IT', 'NZ', 'DK', 'TR']
 // Datepicker widget
 $(function () {
   $('#datepicker').datepicker({
@@ -20,16 +20,18 @@ var handleSubmit = function (event) {
   event.preventDefault();
   var dateInput = dateInputE1.val();
 
-  console.log("input date " + dateInput);
+
   //extracting year from the input date
   var year = moment(dateInput, "yy-mm-dd").year();
 
-
-
-
   for (let i = 0; i < countryCodes.length; i++) {
     const country = countryCodes[i];
-    getHoidayInfo(country, year, dateInput)
+    matchfound = false;
+    //calling getHolidayInfo
+    getHoidayInfo(country, year, dateInput);
+    if (matchfound === false) {
+      document.getElementById(country).textContent = "There are no holidays on this date for this country"
+    }
   }
 
 
@@ -51,14 +53,19 @@ function getHoidayInfo(country, year, dateInput) {
       for (var i = 0; i < data.length; i++) {
 
 
+
         if ((data[i].date === dateInput)) {
-          console.log(data[i].date); console.log(dateInput);
+
           var country = (data[i].countryCode);
-          console.log(country)
+
           renderHolidayInfo(country, data[i])
+          matchfound = true;
         }
         else {
+
           console.log("No holiday Found");
+          // renderErrorCode()
+
         }
       }
     });
@@ -69,19 +76,12 @@ function renderHolidayInfo(country, holidayInfo) {
 
   var showHolidayEl = document.getElementById(country);
   showHolidayEl.textContent = holidayInfo.name;
-  showHolidayEl.classList.add("p-2")
-  var btn1 = document.createElement('button');
-  // var linebreak = document.createElement('br');
-  // var newP = document.createElement('p')
-  btn1.innerHTML = 'Info';
-  btn1.classList.add('bg-brightRedLight', 'hover:bg-darkGrayishBlue', 'hover:text-white', 'p-2');
-  btn1.value = country;
-  // showHolidayEl.appendChild(linebreak);
-  // showHolidayEl.appendChild(newP);
-  showHolidayEl.appendChild(btn1);
-  //add css to buttons
-  btn1.onclick = function() {
 
+  showHolidayEl.classList.add("p-2");
+  var showHolidayE1Parent = document.getElementById(country + "1")
+  showHolidayE1Parent.classList.add("hover:border-brightRed", "hover:border-8", "hover:bg-darkBlue", "hover:text-white");
+  //making the Country card clickable for fetching more info
+  showHolidayEl.onclick = function () {
 
     localStorage.setItem("HolidayName", holidayInfo.name);
     window.location.href = "wikipage.html";
@@ -91,4 +91,7 @@ function renderHolidayInfo(country, holidayInfo) {
 
 }
 
-// renderHolidayInfo("AU", { name: "Australia Day" })
+}
+
+
+
