@@ -72,7 +72,7 @@ function renderHolidayInfo(country, holidayInfo) {
 
   showHolidayEl.classList.add("p-2");
   var showHolidayE1Parent = document.getElementById(country + "1")
-  showHolidayE1Parent.classList.add("hover:border-brightRed", "hover:border-8", "hover:bg-darkBlue", "hover:text-white");
+  showHolidayE1Parent.classList.add("hover:border-brightRed", "hover:border-8", "hover:bg-darkBlue", "hover:text-white","cursor-pointer");
   //making the Country card clickable for fetching more info
   showHolidayEl.onclick = function () {
 
