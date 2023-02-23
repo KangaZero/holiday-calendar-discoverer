@@ -1,10 +1,12 @@
-# holiday-calendar-discovery
+<div align="center">
+<h1>Holiday-calendar-discovery</h1>
 <a name="readme-top"></a>
+</div>
  
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
+  ## Table of Contents
   <ol>
+    <li><a href="#summary">Summary</a></li>
     <li><a href="#description">Description</a></li>
     <li><a href="#user-stories">User stories</a></li>
     <li><a href="#challenges">Challenges</a></li>
@@ -13,23 +15,35 @@
     <li><a href="#links">Links</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
+  
+<!-- Summary -->
+## Summary
+
+A team of creative and enthusiastic web designers who love to explore new cultural aesthetics. Our project goal was to create an online application that allows users to browse, check and learn about different cultural events across ten countries for the year 2022. We used HTML & Tailwind CSS, MomentJS, JQuery and various APIs to build our application from scratch. Our application features a user-friendly interface, a dynamic calendar, animated gifs and informative content about each cultural event. Our application aims to provide users with an engaging and educational experience that enriches their cultural knowledge.
  
 <!-- ABOUT THE PROJECT -->
 ## Description
-<details> <summary>Desktop View</summary>
- 
+
+<h2>Desktop View</h2>
+
 ![Desktop-view for homepage](assets/images/screenshots/homepage-desktop.png)
 ![Desktop-view for wikipage](assets/images/screenshots/wikipage-desktop1.png)
-</details>
-<details>
-<summary>Mobile view</summary>
- 
+
+<br>
+
+<h2>Mobile view</h2>
+<div align="center">
+
 ![Mobile-view for homepage](assets/images/screenshots/homepage-mobile.png)
+
+</div>
+<br>
+
 ![Mobile-view for wikipage](assets/images/screenshots/wikipage-mobile.png)
-</details>
- 
-**What?**
+
+<br>
+
+<h2>Introduction</h2>
  
 In this task, Group 5 was allocated to a challenge to create an online
 application that allows us to brainstorm and apply our existing
@@ -38,7 +52,7 @@ In response, we have created a Cultural calendar that allows users to
 browse, check and learn new cultural aesthetics across Ten different
 countries for the Year 2022.
  
-**Acquired Knowledge**
+<h2>Acquired Knowledge</h2>
  
 Whilst undertaking this project, we applied a range of web design
 applications & techniques commencing from building the initial Bone
@@ -118,7 +132,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
  
 In conclusion, as for our future development, we intend to
 continuously share and improve our existing product offering to
-enhance the overall user experience
+enhance the overall user experience. 
+
+We have demonstrated our skills and knowledge in web design by using various applications and techniques to build our application from scratch. Our application provides users with an engaging and educational experience that enriches their cultural knowledge. We hope that our project will inspire other web designers to explore new cultural aesthetics and create more innovative applications in the future.
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
