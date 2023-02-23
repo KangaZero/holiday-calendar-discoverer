@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Holiday-calendar-discovery</h1>
+<h1>Holiday Calendar Discoverer</h1>
 <a name="readme-top"></a>
 </div>
  
@@ -175,7 +175,7 @@ Here are some of the resources used as reference to build this holiday cultural 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
  
-I would like to acknowledge and credit all contributors.
+We would like to acknowledge and credit all contributors.
 1. Yuhan Jiang (Cindy): [Github](https://github.com/CindzaJ)
     - Contributed to making our presentation, fetching our Nagerdate API Country parameters, Giphy API, and doing research on what countries to use, and their associated holidays. As well as doing our READme.md
  
