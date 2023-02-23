@@ -1,120 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wikipage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="/resources/demos/style.css" />
     <!--Add css link-->
     <script>
-        tailwind.config = {
-            theme: {
-                screens: {
-                    sm: '480px',
-                    md: '768px',
-                    lg: '976px',
-                    xl: '1440px'
-                },
-                extend: {
-                    colors: {
-                        brightRed: 'hsl(12, 88%, 59%)',
-                        brightRedLight: 'hsl(12, 88%, 69%)',
-                        brightRedSupLight: 'hsl(12, 88%, 95%)',
-                        darkBlue: 'hsl(228, 39%, 23%)',
-                        darkGrayishBlue: 'hsl(227, 12%, 61%)',
-                        veryDarkBlue: 'hsl(233, 12%, 13%)',
-                        veryPaleRed: 'hsl(13, 100%, 96%)',
-                        veryLightGray: 'hsl(0, 0%, 98%)',
-                    }
-                },
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "480px",
+            md: "768px",
+            lg: "976px",
+            xl: "1440px",
+          },
+          extend: {
+            colors: {
+              brightRed: "hsl(12, 88%, 59%)",
+              brightRedLight: "hsl(12, 88%, 69%)",
+              brightRedSupLight: "hsl(12, 88%, 95%)",
+              darkBlue: "hsl(228, 39%, 23%)",
+              darkGrayishBlue: "hsl(227, 12%, 61%)",
+              veryDarkBlue: "hsl(233, 12%, 13%)",
+              veryPaleRed: "hsl(13, 100%, 96%)",
+              veryLightGray: "hsl(0, 0%, 98%)",
             },
-        }   
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="font-mono">
+  <body class="font-mono">
     <header id="hero" class="p-6 mb-10 space-y-12 bg-brightRedLight">
-        <h1 class="text-2xl md:text-5xl font-bold text-center">✨ <span id="holiday-title"></span> ✨</h1>
+      <h1 class="text-2xl md:text-5xl font-bold text-center">
+        ✨ <span id="holiday-title"></span> ✨
+      </h1>
     </header>
 
-    <h2 class="text-center px-16 md:px-32 text-xs md:text-base"> Below is a snippet of information from wikipedia about this holiday provided by MediaWiki.</h2>
-    <h2 class="text-center px-16 md:px-32 text-xs md:text-base">Please click the button at the bottom of the page to find out more.</h2>
-    
-    <section id="head"
-        class="flex flex-col md:flex-row items-center py-4 md:py-8 mx-auto mt-10 space-y-10 md:space-y-0 bg-darkGrayishBlue">
-        <h1 class="text-xs md:text-2xl font-bold text-left bg-darkGrayishBlue p-2 md:p-8"><span id="holiday-name"></span>...</h1>
-        <!--insert info-->
-        <p class="text-right wrap"><span id="info-main" ></span></p>
+    <h2 class="text-center px-16 md:px-32 text-xs md:text-base">
+      Below is a snippet of information from wikipedia about this holiday
+      provided by MediaWiki.
+    </h2>
+    <h2 class="text-center px-16 md:px-32 text-xs md:text-base">
+      Please click the button at the bottom of the page to find out more.
+    </h2>
+
+    <section
+      id="head"
+      class="flex flex-col md:flex-row items-center py-4 md:py-8 mx-auto mt-10 space-y-10 md:space-y-0 bg-darkGrayishBlue"
+    >
+      <h1
+        class="text-xs md:text-2xl font-bold text-left bg-darkGrayishBlue p-2 md:p-8"
+      >
+        <span id="holiday-name"></span>...
+      </h1>
+      <!--insert info-->
+      <p class="text-right wrap"><span id="info-main"></span></p>
     </section>
 
-    <br>
-
+    <br />
 
     <section class="flex flex-row justify-around w-100 p-4">
-        <img id="image-area1" >
-        <img id="image-area2" >
-        <img id="image-area3" >
+      <img id="image-area1" />
+      <img id="image-area2" />
+      <img id="image-area3" />
     </section>
 
-    <br>
+    <br />
 
-    <section class=" p-20 md:p-28 bg-veryLightGray space-y-5 md:flex-row">
-        
-        <h2 class="text-center text-xs md:text-base"> Information from related Wiki pages - click on a card to find out more!</h2>
-        <!-- We can append list items here for search query results, it might look something like the following for example -->
-        <ul>
+    <section class="p-20 md:p-28 bg-veryLightGray space-y-5 md:flex-row">
+      <h2 class="text-center text-xs md:text-base">
+        Information from related Wiki pages - click on a card to find out more!
+      </h2>
+      <!-- We can append list items here for search query results, it might look something like the following for example -->
+      <ul>
+        <li
+          class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer"
+          id="infocard1"
+        >
+          <h3 class="text-center font-bold">
+            <span id="infocard1-title"></span>
+          </h3>
+          <br />
+          <p>
+            <span class="text-xs md:text-base" id="infocard1-text"></span>...
+          </p>
+        </li>
+        <br />
 
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer" id="infocard1">
+        <li
+          class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer"
+          id="infocard2"
+        >
+          <h3 class="text-center font-bold">
+            <span id="infocard2-title"></span>
+          </h3>
+          <br />
+          <p>
+            <span class="text-xs md:text-base" id="infocard2-text"></span>...
+          </p>
+        </li>
+        <br />
 
-                <h3 class="text-center font-bold"><span id="infocard1-title"></span></h3>
-                <br>
-                <p><span class="text-xs md:text-base" id="infocard1-text"></span>...</p>
-            </li>
-            <br>
+        <li
+          class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer"
+          id="infocard3"
+        >
+          <h3 class="text-center font-bold">
+            <span id="infocard3-title"></span>
+          </h3>
+          <br />
+          <p>
+            <span class="text-xs md:text-base" id="infocard3-text"></span>...
+          </p>
+        </li>
+        <br />
 
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer" id="infocard2">
-
-                <h3 class="text-center font-bold"><span id="infocard2-title"></span></h3>
-                <br>
-                <p><span class="text-xs md:text-base" id="infocard2-text"></span>...</p>
-            </li>            
-            <br>
-
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer" id="infocard3">
-
-                <h3 class="text-center font-bold"><span id="infocard3-title"></span></h3>
-                <br>
-                <p><span class="text-xs md:text-base" id="infocard3-text"></span>...</p>
-            </li>             
-            <br>
-
-            <li class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer" id="infocard4">
-
-                <h3 class="text-center font-bold"><span id="infocard4-title"></span></h3>
-                <br>
-                <p><span class="text-xs md:text-base" id="infocard4-text"></span>...</p>
-            </li>            
-        </ul>
+        <li
+          class="border-solid border-2 rounded-lg border-black bg-veryPaleRed p-2 md:p-4 hover:border-brightRed hover:border-4 hover:bg-darkBlue hover:text-white hover:cursor-pointer"
+          id="infocard4"
+        >
+          <h3 class="text-center font-bold">
+            <span id="infocard4-title"></span>
+          </h3>
+          <br />
+          <p>
+            <span class="text-xs md:text-base" id="infocard4-text"></span>...
+          </p>
+        </li>
+      </ul>
     </section>
 
     <footer>
-        <div class="flex flex-col p-20 bg-darkGrayishBlue space-y-5 md:flex-row">
-            <button id="return-to-home"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm md:text-base md:justify-start">Back
-                button</button>
+      <div class="flex flex-col p-20 bg-darkGrayishBlue space-y-5 md:flex-row">
+        <button
+          id="return-to-home"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm md:text-base md:justify-start"
+        >
+          Back button
+        </button>
 
-            <p class="container text-center text-white text-sm md:text-base md:text-right hover:text-darkBlue"><a id="wikiButton" href="#">Click here for more
-                    info...</a></p>
-
-        </div>
+        <p
+          class="container text-center text-white text-sm md:text-base md:text-right hover:text-darkBlue"
+        >
+          <a id="wikiButton" href="#">Click here for more info...</a>
+        </p>
+      </div>
     </footer>
-    <script src = "wiki.js"></script>
-    <script src = "imageAPI.js"></script>
+    <script src="wiki.js"></script>
+    <script src="imageAPI.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
-</body>
-
+  </body>
 </html>

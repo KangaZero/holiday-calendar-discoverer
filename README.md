@@ -20,8 +20,9 @@
 ## Summary
 
 A team of creative and enthusiastic web designers who love to explore new cultural aesthetics. Our project goal was to create an online application that allows users to browse, check and learn about different cultural events across ten countries for the year 2022. We used HTML & Tailwind CSS, MomentJS, JQuery and various APIs to build our application from scratch. Our application features a user-friendly interface, a dynamic calendar, animated gifs and informative content about each cultural event. Our application aims to provide users with an engaging and educational experience that enriches their cultural knowledge.
- 
+
 <!-- ABOUT THE PROJECT -->
+
 ## Description
 
 <h2>Desktop View</h2>
@@ -132,10 +133,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
  
 In conclusion, as for our future development, we intend to
 continuously share and improve our existing product offering to
-enhance the overall user experience. 
+enhance the overall user experience.
 
 We have demonstrated our skills and knowledge in web design by using various applications and techniques to build our application from scratch. Our application provides users with an engaging and educational experience that enriches their cultural knowledge. We hope that our project will inspire other web designers to explore new cultural aesthetics and create more innovative applications in the future.
- 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 <!--Links-->
@@ -191,4 +192,3 @@ We would like to acknowledge and credit all contributors.
  
  
 <p align="center">Thanks for reading 😄!</p>
-
