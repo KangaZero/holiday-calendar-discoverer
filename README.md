@@ -8,6 +8,7 @@
   <ol>
     <li><a href="#summary">Summary</a></li>
     <li><a href="#description">Description</a></li>
+    <li><a href="#technologies">Technologies</a></li>
     <li><a href="#user-stories">User stories</a></li>
     <li><a href="#challenges">Challenges</a></li>
     <li><a href="#license">License</a></li>
@@ -75,6 +76,15 @@ different functions that work from behind the scenes to create a
 more engaging user experience.
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--Technologies used-->
+## Technologies
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=javascript,html,css,tailwind,jquery,git" />
+  </a>
+</p>
  
 <!--User stories-->
 ## User stories
