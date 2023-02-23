@@ -22,6 +22,8 @@
 
 A team of creative and enthusiastic web designers who love to explore new cultural aesthetics. Our project goal was to create an online application that allows users to browse, check and learn about different cultural events across ten countries for the year 2022. We used HTML & Tailwind CSS, MomentJS, JQuery and various APIs to build our application from scratch. Our application features a user-friendly interface, a dynamic calendar, animated gifs and informative content about each cultural event. Our application aims to provide users with an engaging and educational experience that enriches their cultural knowledge.
 
+Deployed URL: [https://kangazero.github.io/holiday-calendar-discoverer/](https://kangazero.github.io/holiday-calendar-discoverer/)
+
 <!-- ABOUT THE PROJECT -->
 
 ## Description
@@ -152,9 +154,8 @@ We have demonstrated our skills and knowledge in web design by using various app
 <!--Links-->
 ## Links
  
-* URL - https://kangazero.github.io/holiday-calendar-discoverer/
-* GitHub Repository - git@github.com:KangaZero/holiday-calendar-
-discoverer.git
+* Deployed URL - https://kangazero.github.io/holiday-calendar-discoverer/
+* GitHub Repository - https://github.com/KangaZero/holiday-calendar-discoverer
 * MVP Pitch - https://prezi.com/view/WU2lpxAgEVgVD21urASU/
  
 Here are some of the resources used as reference to build this holiday cultural calendar:
